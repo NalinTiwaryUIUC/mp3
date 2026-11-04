@@ -108,7 +108,7 @@ module.exports = function (router) {
             await user.deleteOne({ session: session });
         });
 
-        res.json({ message: 'User deleted', data: {} });
+        res.status(204).end();
     });
 
     return router;

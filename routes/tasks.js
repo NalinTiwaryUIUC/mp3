@@ -88,7 +88,7 @@ module.exports = function (router) {
             await task.deleteOne({ session: session });
         });
 
-        res.json({ message: 'Task deleted', data: {} });
+        res.status(204).end();
     });
 
     return router;
